@@ -1,0 +1,6 @@
+{
+  "name": "Cosmic Vault",
+  "description": "A digital universe where users collect, discover, and unlock mysterious planets, artifacts, galaxies, and hidden cosmic knowledge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
