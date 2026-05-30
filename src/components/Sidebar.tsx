@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Compass, Sparkles, Gift, Orbit, BookOpen, Trophy, ShieldClose, Sparkle, Eye, Star } from 'lucide-react';
+import { AdPlacement } from './AdPlacement';
 
 interface SidebarProps {
   activeTab: string;
@@ -110,6 +111,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
               style={{ width: `${(planetsUnlockedCount / totalPlanetsCount) * 100}%` }}
             />
           </div>
+        </div>
+
+        {/* Ad monetization sidebar placement (desktop-only) */}
+        <div className="pt-4 border-t border-zinc-850/60 hidden md:block">
+          <AdPlacement type="sidebar" />
         </div>
 
       </aside>

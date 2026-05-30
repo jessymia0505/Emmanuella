@@ -32,6 +32,7 @@ import { DailyMysteryBox } from './components/DailyMysteryBox';
 import { GalaxyMap } from './components/GalaxyMap';
 import { CosmicJournal } from './components/CosmicJournal';
 import { Leaderboard } from './components/Leaderboard';
+import { AdPlacement } from './components/AdPlacement';
 
 import { 
   Planet, 
@@ -586,6 +587,11 @@ export default function App() {
         />
       )}
 
+      {/* Top Banner Ad Placement with full responsiveness and clean layout */}
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-6 pt-4 relative z-10">
+        <AdPlacement type="top-banner" />
+      </div>
+
       {/* Outer Content Layout Grid */}
       <div className="flex-1 max-w-7xl mx-auto w-full flex flex-col md:flex-row relative z-10 px-4 md:px-6 py-6 gap-6">
         
@@ -811,11 +817,21 @@ export default function App() {
                 />
               )}
 
+              {/* In-Content native ad placement visible across all active dashboards */}
+              <div className="pt-4 border-t border-zinc-900/40">
+                <AdPlacement type="in-content" />
+              </div>
+
             </motion.div>
           </AnimatePresence>
 
         </main>
 
+      </div>
+
+      {/* Footer Ad Placement */}
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-6 mt-8 mb-4 relative z-10">
+        <AdPlacement type="footer" />
       </div>
 
       {/* Decorative footer */}
@@ -831,6 +847,9 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Floating Mobile Closable Ad Placement (only render on mobile screens) */}
+      <AdPlacement type="floating-mobile" />
 
     </div>
   );
